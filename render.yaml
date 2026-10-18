@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: transopt-team35-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TRANSOPT_REQUIRE_AUTH
+        value: "1"
+      - key: TRANSOPT_DEMO_PASSWORD
+        sync: false
